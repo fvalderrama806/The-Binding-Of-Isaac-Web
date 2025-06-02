@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Binding of Isaac: Repentance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <header class="header"> <!--cabecera-->   
+        <div class="logo"> <!--Logo-->
+            <a href="./index.html">
+                <img src="./img/logo-principal.png" alt="Isaac Logo" /> 
+            </a>
+        </div>
+        <div class="nav">
+            <a href="./pages/tienda.html" class="store-boton">
+                <img src="./img/icono-tienda.png" alt="Tienda" />
+            </a>
+            <button class="menu-boton" id="open-menu">
+                <img src="./img/menu-burguer.png" alt="Menú" />
+            </button>
+        </div>
+    </header> <!-- Menú desplegable (overlay) -->
+    <div id="overlay-menu" class="overlay hidden">
+            <button class="close-btn" id="close-menu">✖</button>
+        <div class="overlay-content">
+            <img src="./img/logo-principal.png" alt="Isaac Logo" class="menu-logo" />
+            <ul class="menu-list">
+                <li><strong>INTRODUCCIÓN</strong><a href="./pages/introduccion.html">LA HISTORIA DE ISAAC</a></li>
+                <li><strong>JUGABILIDAD</strong><a href="./pages/jugabilidad.html">EL SÓTANO UN MUNDO</a></li>
+                <li><strong>PERSONAJES</strong><a href="./pages/personajes.html">¿QUIÉN SOY?</a></li>
+                <li><strong>TIENDA</strong><a href="./pages/tienda.html">VISITA NUESTRO MERCH</a></li>
+                <li><strong>CONTACTO</strong><a href="./pages/contacto.html">CONTÁCTANOS!!</a></li>
+            </ul>
+        </div>
+    </div>
+    <main> <!--estructura principal-->
+        <section class="hero"> <!--landing page-->
+            <div class="hero-content">
+                <img src="./img/logo-principal.png" alt="The Binding of Isaac: Repentance" class="hero-logo" />
+                <h1>DISPONIBLE YA</h1>
+                <div class="hero-buttons">
+                    <button id="trailer-btn">TRAILER</button> <!--botones tiendas-->
+                    <a href="https://store.steampowered.com/app/1426300/The_Binding_of_Isaac_Repentance/" target="_blank">
+                        <img src="./img/boton-steam.png" alt="Icono 1" /> 
+                    </a>
+                    <a href="https://store.playstation.com/es-cl/product/UP2103-PPSA03311_00-BOIREPENTANCEPS5" target="_blank">
+                        <img src="./img/boton-playstation.png" alt="Icono 2" /> 
+                    </a>
+                    <a href="https://www.xbox.com/es-es/games/store/The-Binding-of-Isaac-Repentance/9PGHSK2QR07H" target="_blank">
+                        <img src="./img/boton-xbox.png" alt="Icono 3" />
+                    </a>
+                    <a href="https://www.nintendo.com/us/store/products/the-binding-of-isaac-repentance-70050000031296-switch/" target="_blank">
+                        <img src="./img/boton-switch.png" alt="Icono 4" />
+                    </a>
+                </div>
+            </div>
+        </section>
+        <div id="trailer-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <iframe
+                    id="youtube-video"
+                    src="https://www.youtube.com/embed/A_C90i1jVzY"
+                    frameborder="0"
+                    allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+        <section class="intro"> <!--intro-->
+            <h2>ORA POR EL ARREPENTIMIENTO<br>Y VUELVE A RENACER</h2>
+            <p>
+                Isaac ha descubierto un nuevo mundo debajo de su casa, repleto de monstruos que están atormentando su cabeza.
+                Mientras recorre el sótano, encontrará ítems que lo ayudan a salir de grandes apuros.
+                ¿Podrá sobrevivir a los peligros antes que acaben con su mente?
+            </p>
+            <div class="intro-images">
+                <div class="intro-image">
+                    <img src="./img/imglandin-1.png" alt="Imagen 1" />
+                </div>
+                <div class="intro-image">
+                    <img src="./img/imglandin-2.png" alt="Imagen 2" />
+                </div>
+            </div>
+        </section>
+        <section class="call-to-action"> <!-- call to action -->
+            <div class="cta-image-container">
+                <img src="./img/imgextra.png" alt="Ilustración del sótano" class="cta-background">
+                <div class="cta-content">
+                    <h2>¿QUÉ HAY EN EL SÓTANO?</h2>
+                    <p>
+                        Adéntrate en lo desconocido y explora las profundidades del sótano, donde cada puerta puede llevarte a un nuevo desafío.
+                        Enfrenta tus miedos, encuentra objetos extraños y descubre secretos que cambiarán destino.
+                    </p>
+                    <a href="./pages/introduccion.html">
+                        <button>EXPLORA MÁS</button> 
+                    </a>
+                </div>
+                <div class="cta-decorative-image">
+                    <img src="./img/monstros.png" alt="Personajes ilustrados" />
+                </div>
+            </div>
+        </section>        
+        <section class="productos-a"> <!--productos-->
+            <div class="titulo-productos">
+                <img src="./img/icono-producto.png" alt="Icono decorativo" />
+                <h2>productos</h2>
+            </div>
+        </section>
+        <section class="productos-seccion">
+            <div class="fondo-edicion-fisica fondo-1"></div>
+            <div class="fondo-edicion-fisica fondo-2"></div>
+            <div class="fondo-edicion-fisica fondo-3"></div> 
+            <div class="productos-caja">   
+                <div class="productos-ab">
+                    <div class="titulo-edicion-fisica">
+                    <img src="./img/icono-producto2.png" alt="Decoración Edición Física" />
+                    <h3>EDICIÓN FÍSICA</h3>
+                </div>
+                <div class="productos-contenedor">
+                    <div class="producto">
+                        <img src="./img/imgjuego-1.png" alt="Caja Leviatán Box" />
+                    <div class="producto-info">
+                        <p>leviatan box</p> 
+                        <select>
+                            <option disabled selected>Elegir versión</option>
+                            <option>nintendo switch</option>
+                            <option>ps5</option>
+                            <option>xbox series X</option>
+                    </select>
+                    </div>
+                </div>
+                <hr class="linea-punteada" />
+                    <div class="producto">
+                        <img src="./img/imgjuego-2.png" alt="Limited Edition Japan" />
+                    <div class="producto-info">
+                        <p>limited edition [japan import]</p>
+                        <select>
+                            <option disabled selected>Elegir versión</option>
+                            <option>ps4</option>
+                            <option>nintendo switch</option>
+                    </select>
+                </div>
+            </div>
+            <hr class="linea-punteada" />
+                <div class="producto">
+                    <img src="./img/imgjuego-3.png" alt="Edición física" class="img-standar" />
+                    <div class="producto-info">
+                        <p>standar edition</p>
+                        <select>
+                            <option disabled selected>Elegir versión</option>
+                            <option>nintendo switch</option>
+                            <option>ps5</option>
+                            <option>ps4</option>
+                            <option>xbox series x</option>
+                        </select>
+                    </div>
+                </div>
+        </section>
+        <section class="productos-seccion productos-digital">
+            <div class="productos-caja">
+                <div class="productos-ab">
+                    <div class="titulo-edicion-digital">
+                    <img src="./img/icono-producto2.png" alt="Decoración Edición Digital" />
+                    <h3>EDICIÓN DIGITAL</h3>
+                </div>
+                <div class="productos-contenedor">
+                    <div class="producto">
+                    <img src="./img/imgjuego-4.png" alt="Edición Digital class="img-digital" />
+                <div class="producto-info">
+                    <p>digital edition</p>
+                    <select>
+                        <option disabled selected>Elegir versión</option>
+                        <option>nintendo switch</option>
+                        <option>ps5</option>
+                        <option>xbox series x</option>
+                        <option>steam</option>   
+                    </select>
+                    <p class="nota">no incluye juego base - comprar tboi:rebirth</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <section class="share"> <!--rrss-->
+            <p class="nicalis-text">todas las imágenes son exclusivas de Nicalis.</p>
+            <div class="barra-morada">
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/nicalisinc/" target="_blank">
+                        <img src="./img/icono-instagram.png" alt="Instagram" />
+                    </a>
+                    <a href="https://x.com/nicalis" target="_blank">
+                        <img src="./img/icono-twitter.png" alt="Twitter" />
+                    </a>
+                    <div class="share-text">SHARE</div>
+                    <a href="">
+                        <img src="./img/icono-share.png" alt="Compartir" />
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-contacto"> <!--pie de pagina-->
+        <div class="footer-logo">
+            <img src="./img/logo-nicalis.png" alt="Logo Nicalis" />
+        </div>
+        <h2>contactanos!!</h2>
+        <p>
+            Suscríbase a nuestra lista de correo para recibir noticias, ofertas y actualizaciones.<br>
+            No te bombardearemos y puedes darte de baja en cualquier momento :)
+        </p>
+        <form class="suscripcion-form">
+            <input type="email" placeholder="Email" required />
+            <button type="submit">SUSCRIBETE</button>
+        </form>
+        <p class="copyright">
+            nicalis 2007 & the binding of isaac 2011-2021. derechos reservados.
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
+    <script> // Abrir y cerrar menú burguer
+        document.getElementById('open-menu').addEventListener('click', function () {
+            const menu = document.getElementById('overlay-menu');
+            menu.classList.remove('hidden');  // Muestra el menú al quitar 'hidden'
+        });
+
+        document.getElementById('close-menu').addEventListener('click', function () {
+            const menu = document.getElementById('overlay-menu');
+            menu.classList.add('hidden');  // Oculta el menú al agregar 'hidden'
+        });
+    </script>
+    <script> // Obtener el modal y el botón de trailer
+        var modal = document.getElementById("trailer-modal");
+        var btn = document.getElementById("trailer-btn");
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+            var iframe = document.getElementById("youtube-video");
+            iframe.src = iframe.src;
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                var iframe = document.getElementById("youtube-video");
+                iframe.src = iframe.src;
+            }
+        }
+    </script> 
+</body>
+</html>
+

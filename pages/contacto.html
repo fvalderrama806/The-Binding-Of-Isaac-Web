@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Binding of Isaac: Repentance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+    <header class="header"> <!--cabecera-->   
+        <div class="logo"> <!--Logo-->
+            <a href="../index.html">
+                <img src="../img/logo-principal.png" alt="Isaac Logo" /> 
+            </a>
+        </div>
+        <div class="nav">
+            <a href="./tienda.html" class="store-boton">
+                <img src="../img/icono-tienda.png" alt="Tienda" />
+            </a>
+            <button class="menu-boton" id="open-menu">
+                <img src="../img/menu-burguer.png" alt="Menú" />
+            </button>
+        </div>
+    </header> <!-- Menú desplegable (overlay) -->
+    <div id="overlay-menu" class="overlay hidden">
+        <div class="overlay-content">
+            <img src="../img/logo-principal.png" alt="Isaac Logo" class="menu-logo" />
+            <button class="close-btn" id="close-menu">✖</button>
+            <ul class="menu-list">
+                <li><strong>INTRODUCCIÓN</strong><a href="./introduccion.html">LA HISTORIA DE ISAAC</a></li>
+                <li><strong>JUGABILIDAD</strong><a href="./jugabilidad.html">EL SÓTANO UN MUNDO</a></li>
+                <li><strong>PERSONAJES</strong><a href="./personajes.html">¿QUIÉN SOY?</a></li>
+                <li><strong>TIENDA</strong><a href="./tienda.html">VISITA NUESTRO MERCH</a></li>
+                <li><strong>CONTACTO</strong><a href="./contacto.html">CONTÁCTANOS!!</a></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <section id="contacto"> <!--contacto-->
+            <div class="contenido">
+                <h2>CONTACTANOS!!</h2>
+                <p>
+                    consulta tus dudas sobre inconvenientes a la hora de comprar o problemas con el videojuego,
+                    te responderemos a la brevedad
+                </p>
+                <address>129 E City Peace Dr, Santa Ana, California 92705, EE.UU</address>
+                <hr>
+                <form>
+                    <div>
+                        <input type="text" placeholder="Nombre" name="nombre" required>
+                        <input type="email" placeholder="Email" name="email" required>
+                    </div>
+                <div>
+                    <textarea placeholder="Mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+            </form> 
+            </div>
+        </section>
+    </main>
+    <footer class="footer-contacto"> <!--pie de pagina-->
+        <div class="footer-logo">
+            <img src="../img/logo-nicalis.png" alt="Logo Nicalis" />
+        </div>
+        <h2>contactanos!!</h2>
+        <p>
+            Suscríbase a nuestra lista de correo para recibir noticias, ofertas y actualizaciones.<br>
+            No te bombardearemos y puedes darte de baja en cualquier momento :)
+        </p>
+        <form class="suscripcion-form">
+            <input type="email" placeholder="Email" required />
+            <button type="submit">SUSCRIBETE</button>
+        </form>
+        <p class="copyright">
+            nicalis 2007 & the binding of isaac 2011-2021. derechos reservados.
+        </p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('open-menu').addEventListener('click', function () {
+            document.getElementById('overlay-menu').classList.remove('hidden');
+        });
+        document.getElementById('close-menu').addEventListener('click', function () {
+            document.getElementById('overlay-menu').classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
