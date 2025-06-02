@@ -419,7 +419,8 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 40px 80px 40px 210px;
+    padding: 40px 80px 40px 80px;
+    margin-left: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -427,7 +428,7 @@ body, html {
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     box-sizing: border-box;
-    text-align: left; 
+    text-align: left !important; 
     }
 
 .cta-content h2 {
@@ -442,6 +443,7 @@ body, html {
     max-width: 600px;
     line-height: 1.6;
     margin-bottom: 30px;
+    margin-left: 5px;
     }
 
 .cta-content button {
@@ -1644,7 +1646,7 @@ body, html {
 }
 
 .intro-image img {
-    max-width: 65%;
+    max-width: 5%;
 }
 }
 
