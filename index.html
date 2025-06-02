@@ -77,15 +77,30 @@
                 Mientras recorre el sótano, encontrará ítems que lo ayudan a salir de grandes apuros.
                 ¿Podrá sobrevivir a los peligros antes que acaben con su mente?
             </p>
-            <div class="intro-images">
+            <div class="intro-images d-none d-md-flex">  <!-- Imágenes visibles en pantallas grandes -->
                 <div class="intro-image">
                     <img src="./img/imglandin-1.png" alt="Imagen 1" />
-                </div>
-                <div class="intro-image">
-                    <img src="./img/imglandin-2.png" alt="Imagen 2" />
-                </div>
             </div>
-        </section>
+            <div class="intro-image">
+                <img src="./img/imglandin-2.png" alt="Imagen 2" />
+            </div>
+        </div>
+        <div id="carouselIntro" class="carousel slide d-block d-md-none mt-4" data-bs-ride="carousel"> <!-- Carrusel visible solo en móviles -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/imglandin-1.png" class="d-block w-100" alt="Imagen 1">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/imglandin-2.png" class="d-block w-100" alt="Imagen 2">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselIntro" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselIntro" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+        </div>
         <section class="call-to-action"> <!-- call to action -->
             <div class="cta-image-container">
                 <img src="./img/imgextra.png" alt="Ilustración del sótano" class="cta-background">

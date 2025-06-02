@@ -46,8 +46,26 @@
             Un día el niño se entera que su madre lo quiere asesinar ya que “Dios se lo dijo”. Isaac intenta huir y se mete a una escotilla que lo lleva al sótano,
             lugar repleto de monstros.
         </p>
-        <img src="../img/imgintroduccion-1.png" alt="Isaac con miedo" class="img-historia-1" />
-        <img src="../img/imgintroduccion-2.png" alt="Sótano" class="img-historia-2" />
+        <div class="d-none d-md-flex gap-3 justify-content-center">  <!-- visible en pantallas grandes -->
+            <img src="../img/imgintroduccion-1.png" alt="Isaac con miedo" class="img-historia-1" />
+            <img src="../img/imgintroduccion-2.png" alt="Sótano" class="img-historia-2" />
+        </div>
+        <div id="carouselHistoria" class="carousel slide d-block d-md-none mt-4" data-bs-ride="carousel"> <!-- visible en pantallas chicas: Carrusel -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/imgintroduccion-1.png" class="d-block w-100" alt="Isaac con miedo">
+        </div>
+        <div class="carousel-item">
+                <img src="../img/imgintroduccion-2.png" class="d-block w-100" alt="Sótano">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHistoria" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselHistoria" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
     </section>
     <section class="rejugabilidad"> <!-- Sección de Rejugabilidad -->
         <h2>MAS CONTENIDO REJUGABLE</h2>

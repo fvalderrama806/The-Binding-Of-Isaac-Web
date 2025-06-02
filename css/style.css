@@ -1644,7 +1644,7 @@ body, html {
 }
 
 .intro-image img {
-    max-width: 85%;
+    max-width: 65%;
 }
 }
 
@@ -2034,6 +2034,23 @@ body, html {
 .titulo-caja h3 {
     font-size: 20px;
 }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.6); 
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    background-size: 60% 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%; /* área más grande para facilitar el clic */
 }
 
 

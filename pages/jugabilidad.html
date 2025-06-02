@@ -43,8 +43,26 @@
         <p>
             The binding of issac te transporta a un juego verdaderamente único, donde tu personaje utiliza sus propias lágrimas como munición en una experiencia que combina con maestría la emoción de los juegos de disparos. Inspirado en el clásico Smash TV o The Leguend of Zelda podrás vivir la experiencia perfecta de un Roguelike pasando por habitaciones llenas de enemigos y derrotando jefes como si fueses un heroe de leyenda.
         </p>
-        <img src="../img/imggame-1.png" alt="Isaac con miedo" class="img-historia-1" />
-        <img src="../img/imggame-2.png" alt="Sótano" class="img-historia-2" />
+        <div class="d-none d-md-flex gap-3 justify-content-center"> <!-- Imágenes visibles en pantallas grandes -->
+            <img src="../img/imggame-1.png" alt="Isaac con miedo" class="img-historia-1" />
+            <img src="../img/imggame-2.png" alt="Sótano" class="img-historia-2" />
+        </div>
+        <div id="carouselJugabilidad" class="carousel slide d-block d-md-none mt-4" data-bs-ride="carousel"> <!-- Carrusel visible solo en móviles -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../img/imggame-1.png" class="d-block w-100" alt="Isaac con miedo">
+            </div>
+            <div class="carousel-item">
+                <img src="../img/imggame-2.png" class="d-block w-100" alt="Sótano">
+            </div>
+            </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselJugabilidad" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselJugabilidad" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
     </section>
     <section class="rejugabilidad"> <!-- Sección mecanicas -->
         <h2>MECANICAS Y SINERGIAS</h2>
