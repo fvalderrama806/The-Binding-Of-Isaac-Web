@@ -1024,7 +1024,7 @@ body, html {
     margin: 0;
 }
 
-/* personajes */
+  /* personajes */
 
 /* seccion quien soy */
 .personaje-principal {
@@ -1227,6 +1227,11 @@ body, html {
 .trauma-texto p {
     font-size: 0.95rem;
     line-height: 1.4;
+}
+
+/* Invertir el orden para cajas específicas (isaac, dad) */
+.trauma-caja.invertida {
+    flex-direction: row-reverse;
 }
 
     /* tienda */
@@ -2149,6 +2154,126 @@ body, html {
         min-height: 100px;
     }
 }
+
+    /* personajes responsive */
+
+
+@media (max-width: 768px) {
+.personaje-principal {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    padding: 30px 0;
+    background-position: top;
+    position: relative; 
+}
+
+.personaje-principal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -13px; 
+    width: 100%;
+    height: 400px;
+    background-color: white; 
+    background-size: contain;
+    z-index: 0;
+}
+
+.marco-contenido {
+    height: auto;
+    padding-top: 100px;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* contenido encima del fondo blanco */
+}
+
+.marco-contenido h1 {
+    font-size: 18px !important;
+    margin-left: 0;
+}
+
+.controles {
+    margin: 20px auto 0 auto;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+}
+
+#imagen-personaje {
+    width: 100px;
+    height: 120px;
+    margin: 40px 0 20px 0;
+    display: block;
+    left: 160px;
+    position: relative;
+    z-index: 1;
+}
+
+#nombre-personaje {
+    font-size: 20px;
+    margin: 0;
+}
+
+#anterior img,
+#siguiente img {
+    width: 30px;
+}
+
+#anterior,
+#siguiente {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+/* Sección traumas */
+.traumas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: left;
+}
+
+.traumas h2 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.traumas .imagen-trauma {
+    order: -1;
+    width: 100px;
+    height: 100px; 
+}
+
+.trauma-cajas {
+    padding: 40px 30px;
+    gap: 90px;
+}
+
+.trauma-caja,
+.trauma-caja.invertida {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.trauma-img {
+    width: 100%;
+    height: 200px;
+    min-height: 200px;
+}
+
+.trauma-texto {
+    width: 100%;
+}
+
+.trauma-texto p {
+    font-size: 0.9rem;
+}
+}
+
 
 
 
