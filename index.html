@@ -71,17 +71,17 @@
             </div>
         </div>
         <section class="intro"> <!--intro-->
-            <h2>ORA POR EL ARREPENTIMIENTO<br>Y VUELVE A RENACER</h2>
-            <p>
+            <h2 class="animate-on-scroll"> ORA POR EL ARREPENTIMIENTO<br>Y VUELVE A RENACER</h2>
+            <p class="animate-on-scroll">
                 Isaac ha descubierto un nuevo mundo debajo de su casa, repleto de monstruos que están atormentando su cabeza.
                 Mientras recorre el sótano, encontrará ítems que lo ayudan a salir de grandes apuros.
                 ¿Podrá sobrevivir a los peligros antes que acaben con su mente?
             </p>
             <div class="intro-images d-none d-md-flex">  <!-- Imágenes visibles en pantallas grandes -->
-                <div class="intro-image">
+                <div class="intro-image left">
                     <img src="./img/imglandin-1.png" alt="Imagen 1" />
             </div>
-            <div class="intro-image">
+            <div class="intro-image right">
                 <img src="./img/imglandin-2.png" alt="Imagen 2" />
             </div>
         </div>
@@ -105,16 +105,16 @@
             <div class="cta-image-container">
                 <img src="./img/imgextra.png" alt="Ilustración del sótano" class="cta-background">
                 <div class="cta-content">
-                    <h2>¿QUÉ HAY EN EL SÓTANO?</h2>
-                    <p>
+                    <h2 class="animate-on-scroll">¿QUÉ HAY EN EL SÓTANO?</h2>
+                    <p class="animate-on-scroll">
                         Adéntrate en lo desconocido y explora las profundidades del sótano, donde cada puerta puede llevarte a un nuevo desafío.
                         Enfrenta tus miedos, encuentra objetos extraños y descubre secretos que cambiarán destino.
                     </p>
                     <a href="./pages/introduccion.html">
-                        <button>EXPLORA MÁS</button> 
+                        <button class="animate-on-scroll">EXPLORA MÁS</button> 
                     </a>
                 </div>
-                <div class="cta-decorative-image">
+                <div class="cta-decorative-image cta-slide-right">
                     <img src="./img/monstros.png" alt="Personajes ilustrados" />
                 </div>
             </div>
@@ -271,7 +271,23 @@
                 iframe.src = iframe.src;
             }
         }
-    </script> 
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target); // Solo animar una vez
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.intro-image').forEach(el => observer.observe(el));
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+            document.querySelectorAll('.cta-slide-left, .cta-slide-right').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
 

@@ -324,12 +324,58 @@ body, html {
     color: #fff;
     }
 
+/* animacioón intro textos */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.animate-on-scroll.animate {
+    animation-name: slideUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
 .intro-images {
     display: flex;
     justify-content: center;
     gap: 100px;
     flex-wrap: wrap;
-    }
+    overflow: hidden;
+}
+
+/* animacioón intro imagenes */ 
+.intro-image {
+    opacity: 0;
+}
+
+.intro-image.left {
+    opacity: 0;
+}
+
+.intro-image.right {
+    opacity: 0;
+}
+
+.intro-image.left.animate {
+    animation-name: slideInFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; /* Mantiene estado final */
+    animation-iteration-count: 1; /* Se ejecuta una vez */
+    animation-delay: 0s; /* Sin retardo */
+}
+
+.intro-image.right.animate {
+    animation-name: slideInFromRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-delay: 0s;
+}
+
 
 .intro-image img {
     max-width: 400px;
@@ -474,6 +520,20 @@ body, html {
     height: auto;
     display: block;
     }
+
+/* animación texto + imagen call to action */
+.cta-slide-right {
+    opacity: 0;
+    transform: translateX(100%);
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.cta-slide-right.animate {
+    animation-name: slideInFromRight;
+}
+
 
     /* productos */
 
@@ -2308,7 +2368,54 @@ body, html {
 }
 }
 
+    /* Animaciones */
 
+@keyframes slideInFromLeft {
+from {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+to {
+    transform: translateX(0);
+    opacity: 1;
+}
+}
+
+@keyframes slideInFromRight {
+from {
+    transform: translateX(100%);
+    opacity: 0;
+}
+to {
+    transform: translateX(0);
+    opacity: 1;
+}
+}
+
+@keyframes slideUp {
+from {
+    transform: translateY(50px);
+    opacity: 0;
+}
+to {
+    transform: translateY(0);
+    opacity: 1;
+}
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
 
 
