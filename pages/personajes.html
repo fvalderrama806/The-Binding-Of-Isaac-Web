@@ -39,10 +39,10 @@
     </div>
     <main>
         <section class="personaje-principal"> <!--personajes caja-->
-            <div class="marco-contenido">
+            <div class="marco-contenido slide-up">
                 <h1>¿WHO AM I?</h1>
                 <div class="imagen-contenedor">
-                    <img id="imagen-personaje" src="" alt="Personaje actual" />
+                    <img id="imagen-personaje" class="personaje" src="" alt="Personaje actual" />
                 </div>
                 <div class="controles">
                     <button id="anterior">
@@ -56,11 +56,11 @@
             </div>
         </section>
         <section class="traumas"> <!--seccion traumas-->
-            <h2>isaac traumas</h2>
+            <h2 class="animate-on-scroll">isaac traumas</h2>
             <img src="../img/icon-personaje.png" alt="Isaac traumado" class="imagen-trauma" />
         </section>
         <div class="trauma-cajas"> <!--cajas info isaac-->
-            <div class="trauma-caja">
+            <div class="trauma-caja intro-image left">
                 <img src="../img/imgpersonaje-1.png" alt="Mom" class="trauma-img" />
                 <div class="trauma-texto">
                     <h2>mom</h2>
@@ -68,7 +68,7 @@
                     <p>La mamá de Isaac, conocida como "Mom", es el principal trauma del niño. Ella cree que Dios le mandó a sacrificar a su hijo por lo que isaac debe eliminarla si quiere vivir.</p>
                 </div>
             </div>
-            <div class="trauma-caja invertida">
+            <div class="trauma-caja invertida intro-image right">
                 <img src="../img/imgpersonaje-2.png" alt="Dad" class="trauma-img" />
                 <div class="trauma-texto">
                     <h2>dad</h2>
@@ -76,7 +76,7 @@
                     <p>El padre de Isaac es una figura misteriosa y casi ausente. Se sabe que dejó a Isaac y a su madre, lo que contribuyó al abandono y quiebre familiar.</p>
                 </div>
             </div>
-            <div class="trauma-caja">
+            <div class="trauma-caja intro-image left">
                 <img src="../img/imgpersonaje-3.png" alt="Satan" class="trauma-img" />
                 <div class="trauma-texto">
                     <h2>satan</h2>
@@ -84,7 +84,7 @@
                     <p>Es uno de los traumas de Isaac, siendo también un jefe importante a vencer. Representa una figura demoníaca que atormenta las noches de Isaac.</p>
                 </div>
             </div>
-            <div class="trauma-caja invertida">
+            <div class="trauma-caja invertida intro-image right">
                 <img src="../img/imgpersonaje-4.png" alt="Isaac" class="trauma-img" />
                 <div class="trauma-texto">
                     <h2>isaac</h2>
@@ -135,7 +135,7 @@
             { nombre: "THE LOST", imagen: "../img/the-lost.png" },
             { nombre: "LILITH", imagen: "../img/lilith.png" },
             { nombre: "KEEPER", imagen: "../img/keeper.png" },
-            { nombre: "THE FORGOTTEN", imagen: "../img/the-forgotten.png" },
+            { nombre: "THE SOUL", imagen: "../img/the-forgotten.png" },
             { nombre: "APOLLYON", imagen: "../img/apollyon.png" },
             { nombre: "BETHANY", imagen: "../img/bethany.png" },
             { nombre: "JACOB Y ESAU", imagen: "../img/jacob-esau.png" },
@@ -159,6 +159,22 @@
         });
 
         actualizarPersonaje();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target); // Solo animar una vez
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.intro-image').forEach(el => observer.observe(el));
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+            document.querySelectorAll('.slide-up').forEach(el => observer.observe(el));
+        });
     </script>
 </body>
 </html>

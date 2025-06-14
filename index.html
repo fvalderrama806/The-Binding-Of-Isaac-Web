@@ -131,12 +131,12 @@
             <div class="fondo-edicion-fisica fondo-3"></div> 
             <div class="productos-caja">   
                 <div class="productos-ab">
-                    <div class="titulo-edicion-fisica">
+                    <div class="titulo-edicion-fisica slide-up">
                     <img src="./img/icono-producto2.png" alt="Decoración Edición Física" />
                     <h3>EDICIÓN FÍSICA</h3>
                 </div>
                 <div class="productos-contenedor">
-                    <div class="producto">
+                    <div class="producto slide-up ">
                         <img src="./img/imgjuego-1.png" alt="Caja Leviatán Box" />
                     <div class="producto-info">
                         <p>leviatan box</p> 
@@ -145,11 +145,11 @@
                             <option>nintendo switch</option>
                             <option>ps5</option>
                             <option>xbox series X</option>
-                    </select>
+                        </select>
                     </div>
                 </div>
                 <hr class="linea-punteada" />
-                    <div class="producto">
+                    <div class="producto slide-up">
                         <img src="./img/imgjuego-2.png" alt="Limited Edition Japan" />
                     <div class="producto-info">
                         <p>limited edition [japan import]</p>
@@ -157,34 +157,37 @@
                             <option disabled selected>Elegir versión</option>
                             <option>ps4</option>
                             <option>nintendo switch</option>
-                    </select>
-                </div>
-            </div>
-            <hr class="linea-punteada" />
-                <div class="producto">
-                    <img src="./img/imgjuego-3.png" alt="Edición física" class="img-standar" />
-                    <div class="producto-info">
-                        <p>standar edition</p>
-                        <select>
-                            <option disabled selected>Elegir versión</option>
-                            <option>nintendo switch</option>
-                            <option>ps5</option>
-                            <option>ps4</option>
-                            <option>xbox series x</option>
                         </select>
                     </div>
                 </div>
+                <hr class="linea-punteada" />
+                    <div class="producto slide-up">
+                        <img src="./img/imgjuego-3.png" alt="Edición física" class="img-standar" />
+                        <div class="producto-info">
+                            <p>standar edition</p>
+                            <select>
+                                <option disabled selected>Elegir versión</option>
+                                <option>nintendo switch</option>
+                                <option>ps5</option>
+                                <option>ps4</option>
+                                <option>xbox series x</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section class="productos-seccion productos-digital">
             <div class="fondo-edicion-digital"></div>
-            <div class="productos-caja">
+            <div class="productos-caja slide-up">
                 <div class="productos-ab">
                     <div class="titulo-edicion-digital">
                     <img src="./img/icono-producto2.png" alt="Decoración Edición Digital" />
                     <h3>EDICIÓN DIGITAL</h3>
                 </div>
                 <div class="productos-contenedor">
-                    <div class="producto">
+                    <div class="producto slide-up">
                     <img src="./img/imgjuego-4.png" alt="Edición Digital class="img-digital" />
                 <div class="producto-info">
                     <p>digital edition</p>
@@ -286,6 +289,7 @@
             document.querySelectorAll('.intro-image').forEach(el => observer.observe(el));
             document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
             document.querySelectorAll('.cta-slide-left, .cta-slide-right').forEach(el => observer.observe(el));
+            document.querySelectorAll('.slide-up').forEach(el => observer.observe(el));
         });
     </script>
 </body>

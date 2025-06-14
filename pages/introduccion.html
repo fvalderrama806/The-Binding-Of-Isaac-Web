@@ -39,16 +39,16 @@
     </div>
     <main>
     <section class="historia"> <!-- Sección de Historia del juego -->
-        <h1>la aventura de isaac</h1>
-        <p>
+        <h1 class="animate-on-scroll">la aventura de isaac</h1>
+        <p class="animate-on-scroll">
             La historia de Isaac es inspirada por el relato bíblico del hijo de Abraham quien Dios le pide sacrificar a su hijo como acto de fe.
             Trata de Isaac, un niño que vive con su madre, solos en una pequeña casa en una colina que además tienen problemas familiares y traumas.
             Un día el niño se entera que su madre lo quiere asesinar ya que “Dios se lo dijo”. Isaac intenta huir y se mete a una escotilla que lo lleva al sótano,
             lugar repleto de monstros.
         </p>
         <div class="d-none d-md-flex gap-3 justify-content-center">  <!-- visible en pantallas grandes -->
-            <img src="../img/imgintroduccion-1.png" alt="Isaac con miedo" class="img-historia-1" />
-            <img src="../img/imgintroduccion-2.png" alt="Sótano" class="img-historia-2" />
+            <img src="../img/imgintroduccion-1.png" alt="Isaac con miedo" class="img-historia-1 intro-image left" />
+            <img src="../img/imgintroduccion-2.png" alt="Sótano" class="img-historia-2 intro-image right" />
         </div>
         <div id="carouselHistoria" class="carousel slide d-block d-md-none mt-4" data-bs-ride="carousel"> <!-- visible en pantallas chicas: Carrusel -->
         <div class="carousel-inner">
@@ -68,13 +68,13 @@
     </div>
     </section>
     <section class="rejugabilidad"> <!-- Sección de Rejugabilidad -->
-        <h2>MAS CONTENIDO REJUGABLE</h2>
-        <p>
+        <h2 class="animate-on-scroll">MAS CONTENIDO REJUGABLE</h2>
+        <p class="animate-on-scroll">
             Cada vez que juegas, el mundo cambia. Con cientos de objetos únicos, múltiples personajes desbloqueables y desafíos especiales,
             cada partida ofrece una experiencia distinta. ¡Explora, muere, mejora y vuelve a intentarlo!
         </p>
         <div class="cajas-info"> <!--seccion cajas-->
-            <div class="caja">
+            <div class="caja slide-up">
                 <div class="titulo-caja">
                     <h3>objetos</h3>
                     <img src="../img/icono-corazon.png" alt="icono" />
@@ -82,7 +82,7 @@
                 <img src="../img/imgintroduccion-3.png" alt="objetos" />
                 <p>En cada piso puedes encontrar objetos aleatorios para progresar en la aventura que te ayudan a protegerte de los enemigos.</p>
                 </div>
-                <div class="caja">
+                <div class="caja slide-up">
                     <div class="titulo-caja">
                         <h3>finales</h3>
                         <img src="../img/icono-corazon.png" alt="icono" />
@@ -90,7 +90,7 @@
                     <img src="../img/imgintroduccion-4.png" alt="finales" />
                     <p>Descubre distintos finales según tus decisiones, rutas y objetos durante la partida.</p>
                 </div>
-                <div class="caja">
+                <div class="caja slide-up">
                     <div class="titulo-caja">
                         <h3>jefes y enemigos</h3>
                         <img src="../img/icono-corazon.png" alt="icono" />
@@ -98,7 +98,7 @@
                     <img src="../img/imgintroduccion-5.png" alt="enemigos" />
                     <p>Las criaturas del sótano siempre están furiosas y atormentarán al protagonista de turno.</p>
                     </div>
-                <div class="caja">
+                <div class="caja slide-up">
                     <div class="titulo-caja">
                         <h3>roguelike</h3>
                         <img src="../img/icono-corazon.png" alt="icono" />
@@ -133,6 +133,22 @@
         });
         document.getElementById('close-menu').addEventListener('click', function () {
             document.getElementById('overlay-menu').classList.add('hidden');
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target); // Solo animar una vez
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.intro-image').forEach(el => observer.observe(el));
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+            document.querySelectorAll('.slide-up').forEach(el => observer.observe(el));
         });
     </script>
 </body>

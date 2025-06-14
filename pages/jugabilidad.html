@@ -39,13 +39,13 @@
     </div>
     <main>
     <section class="historia"> <!-- Sección jugabilidad igual a historia -->
-        <h1>el sotano un mundo</h1>
-        <p>
+        <h1 class="animate-on-scroll">el sotano un mundo</h1>
+        <p class="animate-on-scroll">
             The binding of issac te transporta a un juego verdaderamente único, donde tu personaje utiliza sus propias lágrimas como munición en una experiencia que combina con maestría la emoción de los juegos de disparos. Inspirado en el clásico Smash TV o The Leguend of Zelda podrás vivir la experiencia perfecta de un Roguelike pasando por habitaciones llenas de enemigos y derrotando jefes como si fueses un heroe de leyenda.
         </p>
         <div class="d-none d-md-flex gap-3 justify-content-center"> <!-- Imágenes visibles en pantallas grandes -->
-            <img src="../img/imggame-1.png" alt="Isaac con miedo" class="img-historia-1" />
-            <img src="../img/imggame-2.png" alt="Sótano" class="img-historia-2" />
+            <img src="../img/imggame-1.png" alt="Isaac con miedo" class="img-historia-1 intro-image left" />
+            <img src="../img/imggame-2.png" alt="Sótano" class="img-historia-2 intro-image right" />
         </div>
         <div id="carouselJugabilidad" class="carousel slide d-block d-md-none mt-4" data-bs-ride="carousel"> <!-- Carrusel visible solo en móviles -->
         <div class="carousel-inner">
@@ -65,13 +65,13 @@
     </div>
     </section>
     <section class="rejugabilidad"> <!-- Sección mecanicas -->
-        <h2>MECANICAS Y SINERGIAS</h2>
-        <p>
+        <h2 class="animate-on-scroll">MECANICAS Y SINERGIAS</h2>
+        <p class="animate-on-scroll">
             Isaac cuenta con una serie de mécanicas que permiten combinar
             objeto para potenciar tus habilidades. Ten en cuenta que los objetos modifican tu forma de jugar asi´que descubre cual es la mejor combinación que puedes hacer con los objetos aleatorios que consigas en cada habitación
         </p>
         <div class="cajas-info"> <!--seccion cajas-->
-            <div class="caja">
+            <div class="caja slide-up">
                 <div class="titulo-caja">
                     <h3>active items</h3>
                     <img src="../img/icono-corazon.png" alt="icono" />
@@ -79,7 +79,7 @@
                 <img src="../img/imggame-3.png" alt="objetos" />
                 <p>Los objetos activos son items que se pueden usar una vez y tienen una barra recargable con baterias repartidas en el juego</p>
                 </div>
-                <div class="caja">
+                <div class="caja slide-up">
                     <div class="titulo-caja">
                         <h3>pasive items</h3>
                         <img src="../img/icono-corazon.png" alt="icono" />
@@ -87,7 +87,7 @@
                     <img src="../img/imggame-4.png" alt="finales" />
                     <p>A diferencia de los activos, los objetos pasivos son mucho mas diversos y varian en las estadisticas de Isaac.</p>
                 </div>
-                <div class="caja">
+                <div class="caja slide-up">
                     <div class="titulo-caja">
                         <h3>trinkets</h3>
                         <img src="../img/icono-corazon.png" alt="icono" />
@@ -96,7 +96,7 @@
                     <p>Son un tipo de coleccionable que proporcionan bonificaciones pasivas 
                     a Isaac modificando atributos especificos.</p>
                     </div>
-                <div class="caja">
+                <div class="caja slide-up">
                     <div class="titulo-caja">
                         <h3>pils & cards</h3>
                         <img src="../img/icono-corazon.png" alt="icono" />
@@ -104,7 +104,7 @@
                     <img src="../img/imggame-6.png" alt="roguelike" />
                     <p>Se encuentran en las salas y son de uso instantaneo que dan efectos o ataques especificos.</p>
                 </div>
-                <div class="caja caja-centrada">
+                <div class="caja caja-centrada slide-up">
                     <div class="titulo-caja">
                         <h3>angel o demonio</h3>
                         <img src="../img/icono-corazon.png" alt="icono" />
@@ -141,6 +141,21 @@
             document.getElementById('overlay-menu').classList.add('hidden');
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        observer.unobserve(entry.target); // Solo animar una vez
+                    }
+                });
+            }, { threshold: 0.5 });
 
+            document.querySelectorAll('.intro-image').forEach(el => observer.observe(el));
+            document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+            document.querySelectorAll('.slide-up').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
