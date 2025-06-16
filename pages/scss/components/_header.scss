@@ -1,0 +1,116 @@
+    //*? index o portada web
+
+// estilos base para header
+.header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 38px 60px;
+    height: 60px;
+    margin: 0;
+
+.logo {
+    img {
+    height: 45px;
+    margin-top: 5px;
+    }
+  }
+
+  // botones de navegación
+.nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+    button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+
+    img {
+        width: 35px;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+
+.menu-boton {
+    background-color: #d9d9d9;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    img {
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    }
+  }
+
+.store-boton {
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+
+    img {
+    width: 45px !important;
+    height: 75px !important;
+    margin-top: -2px;
+    }
+  }
+}
+
+    //*? introducción y jugabilidad
+
+//textos historia
+// components/_header.scss
+
+.historia {
+    background-image: url('../img/fondo-2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    -position: center;
+    padding: 80px 20px;
+    color: white;
+    text-align: center;
+    -family: $font-main;
+
+h1 {
+    font-family: $font-retro;
+    font-size: 24px;
+    color: $color-dorado-claro;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+p {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.img-historia-1,
+.img-historia-2 {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px;
+    padding: 60px 20px;
+    display: inline-block;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+}
+
+
+

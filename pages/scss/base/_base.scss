@@ -1,0 +1,48 @@
+    //*? index o portada web
+
+// estilo para el iframe global
+#youtube-video {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+// elementos caja
+body {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+    //*? introduccion y jugabilidad
+
+// variables globales
+$color-dorado-claro: #F3C969;
+$color-dorado-claro2: #fcdc58;
+$color-morado: #8661C1;
+$color-morado-oscuro: #4E2C7A;
+
+$font-main: 'Nunito Sans', sans-serif;
+$font-retro: 'Press Start 2P', cursive;
+
+body {
+    font-family: $font-main;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}    
+
