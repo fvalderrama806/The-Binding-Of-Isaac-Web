@@ -1,0 +1,784 @@
+    //*? Index o Portada Web
+
+// Header responsivo 
+@media (max-width: 768px) {
+.header {
+    padding: 16px 20px;
+    height: auto;
+}
+
+.logo img {
+    height: 55px;
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.nav {
+    gap: 10px;
+}
+
+.menu-boton img {
+    width: 45px !important;
+    height: 45px !important;
+}
+
+.store-boton img {
+    width: 55px !important;
+    height: 90px !important;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+}
+
+// Menú desplegable responsivo
+@media (max-width: 767px) {
+.overlay-content {
+    width: 90%;
+    padding: 20px;
+    margin: 50px auto 30px;
+    text-align: left;
+    border-radius: 8px;
+}
+
+.menu-logo {
+    width: 250px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.menu-list li {
+    font-size: 13px;
+    margin: 6px 0;
+    text-align: left;
+}
+
+.menu-list h2 {
+    font-size: 11px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.close-btn {
+    width: 50px;
+    height: 50px;
+    top: 40px;
+    right: 28px;
+    font-size: 25px;
+}
+}
+
+// Hero responsivo 
+@media (max-width: 768px) {
+.hero {
+    height: 76vh;
+    padding: 20px;
+    background-position: center top;
+    background-size: 300%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.hero-logo {
+    width: 500px;
+    max-width: 100%;
+    margin: 300px auto 0;
+}
+
+.hero h1 {
+    font-size: 28px;
+    margin-top: 25px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+    flex-direction: row;
+    margin: 0;
+}
+
+.store-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.store-buttons .trailer-btn {
+    font-size: 12px;
+    padding: 8px 14px;
+    white-space: nowrap;
+}
+
+  .store-buttons > * {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.hero-buttons img {
+    width: 50px;
+    height: 50px;
+}
+}
+
+// Intro responsivo 
+@media (max-width: 768px) {
+.intro {
+    margin-top: -50px;
+    padding: 40px 15px;
+}
+
+.intro h2 {
+    font-size: 20px;
+    margin-top: 70px;
+    line-height: 1.4;
+}
+
+.intro p {
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.intro-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.intro-image img {
+    max-width: 5%;
+}
+}
+
+// Call to action responsivo 
+@media (max-width: 768px) {
+.cta-image-container {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.cta-background {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.cta-content {
+    position: absolute;
+    padding: 30px 20px;
+    padding-right: 150px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.cta-content h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+.cta-content button {
+    font-size: 10px;
+    padding: 8px 16px;
+}
+
+.cta-decorative-image {
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    width: 145px;
+    z-index: 1;
+}
+}
+
+// Productos responsivo 
+@media (max-width: 768px) {
+.productos-a {
+    padding-top: 0;
+}
+
+.titulo-productos {
+    flex-direction: column;
+    gap: 10px;
+
+    h2 {
+    font-size: 24px;
+    }
+
+    img {
+    width: 60px;
+    }
+}
+
+.productos-seccion {
+    padding: 30px 15px;
+    min-height: auto;
+}
+
+.productos-caja {
+    padding: 20px 15px;
+    border-radius: 8px;
+}
+
+.productos-titulo {
+    flex-direction: column;
+    gap: 10px;
+
+    h2 {
+    font-size: 16px;
+    text-align: center;
+    }
+
+    img {
+    width: 40px;
+    }
+}
+
+.producto {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+
+    img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .producto-info {
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        gap: 10px;
+        align-items: center;
+
+    p {
+        font-size: 16px;
+    }
+
+    select {
+        font-size: 10px;
+        padding: 8px;
+        width: 100%;
+        max-width: 250px;
+        background-color: #2C1460;
+        color: #fff;
+        border: none;
+        font-family: 'Press Start 2P', cursive;
+    }
+    }
+
+    .producto-fila {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .img-standar,
+    .img-digital {
+        width: 40px;
+    }
+
+    .titulo-edicion-fisica,
+    .titulo-edicion-digital {
+        flex-direction: column;
+        gap: 10px;
+
+    h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    img {
+        width: 45px;
+    }
+    }
+
+    .linea-punteada {
+        margin: 20px auto;
+    }
+
+    .nota {
+        font-size: 10px;
+        text-align: center;
+        padding: 0 10px;
+    }
+  }
+}
+
+// Share responsivo 
+@media (max-width: 768px) {
+.share {
+    padding: 40px 15px;
+    gap: 16px;
+
+    p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .barra-morada {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 15px;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .social-icons {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 12px;
+
+    a img {
+        width: 38px;
+      }
+    }
+
+    .share-text {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        text-align: center;
+    }
+
+    .nicalis-text {
+        font-size: 11px;
+        top: -5px;
+        padding: 0 10px;
+        text-align: center;
+    }
+  }
+}
+
+    //*? Introducció y Jugabilidad 
+
+// introducción y jugabilidad responsive 
+@media (max-width: 768px) {
+.historia {
+    padding: 60px 30px;
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 25px;
+        text-align: justify;
+    }
+}
+
+.img-historia-1,
+.img-historia-2 {
+    padding: 35px 12px;
+    margin: 0 auto 18px auto;
+    max-width: 90%;
+}
+
+.rejugabilidad {
+    padding: 35px 30px;
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: justify;
+    }
+}
+
+.cajas-info {
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.caja {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 13px;
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 19px;
+    }
+}
+
+.centrada {
+    margin: 25px auto 0 auto;
+    padding: 13px;
+    max-width: 95%;
+}
+
+.caja-centrada {
+    max-width: 95%;
+    margin: 25px auto 0 auto;
+
+    p {
+        font-size: 18px;
+    }
+}
+
+.rejugabilidad-alt {
+    padding: 35px 12px;
+
+    .cajas-info {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .caja {
+        width: 95%;
+        padding: 13px;
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 19px;
+      }
+    }
+}
+
+.titulo-caja {
+    padding: 9px;
+    gap: 6px;
+    margin: 8px;
+
+    img {
+        width: 45px;
+        height: 45px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+  }
+}
+
+// Estilos globales del carrusel
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    background-size: 60% 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 15%;
+}
+
+    //*? Tienda
+
+// tienda responsive
+
+@media (max-width: 768px) {
+.tienda-wrapper {
+    padding: 1rem 0.5rem;
+
+    section {
+        padding: 1.5rem 1rem;
+
+    > div:first-child h2 {
+        font-size: 12px;
+        bottom: 15px;
+    }
+
+    > div:nth-child(n+2):nth-last-child(n+2) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+
+        > div {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    a button {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    > div:last-child a button {
+        width: auto;
+        font-size: 1rem;
+        padding: 0.75rem 1rem;
+      }
+    }
+  }
+}
+
+    //*? Contacto
+
+// contacto responsive 
+@media (max-width: 768px) {
+#contacto {
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .contenido {
+        margin-top: 0;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    p,
+    address {
+        font-size: 20px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    form {
+        div:first-child {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 20px;
+        width: 100%;
+        padding: 10px;
+    }
+
+    textarea {
+        min-height: 100px;
+      }
+    }
+  }
+}
+
+    //*? Personajes
+
+// personajes responsive 
+@media (max-width: 768px) {
+.personaje-principal {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    padding: 30px 0;
+    background-position: top;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -13px;
+        width: 100%;
+        height: 400px;
+        background-color: white;
+        background-size: contain;
+        z-index: 0;
+    }
+
+    .marco-contenido {
+        height: auto;
+        padding-top: 100px;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+
+    h1 {
+        font-size: 18px !important;
+        margin-left: 0;
+    }
+    }
+
+    .controles {
+        margin: 20px auto 0 auto;
+        justify-content: center;
+        gap: 15px;
+        padding: 0;
+    }
+
+    #imagen-personaje {
+        width: 100px;
+        height: 120px;
+        margin: 40px 0 20px 0;
+        display: block;
+        left: 160px;
+        position: relative;
+        z-index: 1;
+    }
+
+    #nombre-personaje {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    #anterior,
+    #siguiente {
+        margin-top: 0;
+        margin-left: 0;
+
+    img {
+        width: 30px;
+    }
+    }
+}
+
+// Sección traumas 
+.traumas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: left;
+
+    h2 {
+        font-size: 22px;
+        margin: 0;
+    }
+
+    .imagen-trauma {
+        order: -1;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.trauma-cajas {
+    padding: 40px 30px;
+    gap: 90px;
+
+    .trauma-caja,
+    &.invertida {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+
+    .trauma-img {
+        width: 100%;
+        height: 200px;
+        min-height: 200px;
+    }
+
+    .trauma-texto {
+        width: 100%;
+
+        p {
+            font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+    //*? Footer
+
+// Footer responsive
+@media (max-width: 768px) {
+.footer-contacto {
+    padding: 40px 15px 20px 15px;
+
+    h2 {
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .copyright {
+        font-size: 0.8rem;
+        padding-top: 10px;
+    }
+}
+
+.footer-logo {
+    img {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+}
+
+.suscripcion-form {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 30px;
+
+    input[type="email"] {
+        padding: 10px;
+        font-size: 0.7rem;
+        width: 200px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.7rem;
+        width: 140px;
+    }
+  }
+}
+
+
+
+
+
+

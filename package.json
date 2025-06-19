@@ -4,7 +4,7 @@
   "description": "<h1 align=\"center\">Hola, soy Francisco Valderrama Orellana</h1>\r <h3 align=\"center\">Diseñador Gráfico especializado en UX/UI y conocimientos de desarrollo web</h3>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "sass --watch pages/scss/estilos.scss:css/estilos.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/fvalderrama806/The-Binding-Of-Isaac-Web/issues"
   },
-  "homepage": "https://github.com/fvalderrama806/The-Binding-Of-Isaac-Web#readme"
+  "homepage": "https://github.com/fvalderrama806/The-Binding-Of-Isaac-Web#readme",
+  "keywords": [],
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
 }

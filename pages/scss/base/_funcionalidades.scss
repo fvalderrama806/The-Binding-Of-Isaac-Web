@@ -299,3 +299,160 @@ h3 {
     margin: 0;
 }
 }
+
+    //*? Personajes
+
+//seccion quien soy
+.personaje-principal {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/fondo-2.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Press Start 2P', cursive;
+
+&::before {
+    content: "";
+    position: absolute;
+    background-image: url('../img/fondo-personajes.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    max-width: 1500px;
+    height: 650px;
+    z-index: 1;
+}
+
+> div:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+}
+
+.marco-contenido {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    height: 440px;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: flex-start;
+    text-align: center;
+    overflow: hidden;
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 42px !important;
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+    margin-left: 35px;
+}
+}
+
+.imagen-contenedor {
+    margin-top: -20px;
+}
+
+#imagen-personaje {
+    width: 140px;
+    height: 160px;
+    object-fit: contain;
+    margin: 150px auto 20px 35px;
+    display: block;
+}
+
+.personaje-doble {
+    transform: scale(1.5);
+    transform-origin: center bottom;
+}
+
+.controles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    gap: 20px;
+    margin-top: 0;
+    transform: translateY(-10px);
+    margin-left: 40px;
+    padding: 0 30px;
+    overflow: visible;
+}
+
+#nombre-personaje {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin: 0 40px;
+    min-width: 120px;
+}
+
+#anterior,
+#siguiente {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-top: 0;
+    margin-left: 30px;
+    cursor: pointer;
+
+img {
+    width: 40px;
+    height: auto;
+}
+
+&:hover {
+    transform: scale(1.1);
+}
+}
+
+//*? Contacto
+
+// Imputs y Componentes
+#contacto input[type="text"],
+#contacto input[type="email"],
+#contacto textarea {
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#contacto button.btn-enviar {
+    background-color: #866dd6;
+    color: white;
+    border: none;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: 'Nunito Sans', sans-serif;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 50%;
+    max-width: 400px;
+    transition: background-color 0.3s ease;
+
+&:hover {
+    background-color: #553d99;
+}
+}
+
