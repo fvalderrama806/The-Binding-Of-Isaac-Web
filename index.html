@@ -56,9 +56,20 @@
                     <a href="https://www.nintendo.com/us/store/products/the-binding-of-isaac-repentance-70050000031296-switch/" target="_blank">
                         <img src="./img/boton-switch.png" alt="Icono 4" />
                     </a>
+                    <div class="music-wrapper"> <!-- Botón música a la derecha -->
+                        <button id="music-toggle" aria-label="Reproducir música">
+                            <img id="music-icon" src="./img/boton-musica0.png" alt="Icono Música" />
+                        </button>
+                        <ul class="song-menu hidden">
+                            <li data-src="./songs/Kave Diluvii (Flooded Caves).mp3" data-icon="./img/boton-musica1.png">Kave Diluvii (Flooded Caves)</li>
+                            <li data-src="./songs/Genesis 13_37 (Retro Beats).mp3" data-icon="./img/boton-musica2.png">Genesis 13:37 (Retro Beats)</li>
+                            <li data-src="./songs/Descensum (Bonus).mp3" data-icon="./img/boton-musica3.png">Descensum (Bonus)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
+        <audio id="music-player" loop preload="auto"></audio>
         <div id="trailer-modal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -290,6 +301,56 @@
             document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
             document.querySelectorAll('.cta-slide-left, .cta-slide-right').forEach(el => observer.observe(el));
             document.querySelectorAll('.slide-up').forEach(el => observer.observe(el));
+        });
+    </script>
+    <script> // para botón musica
+        const player = document.getElementById('music-player');
+        const toggleBtn = document.getElementById('music-toggle');
+        const musicIcon = document.getElementById('music-icon');
+        const menu = document.querySelector('.song-menu');
+        const musicWrapper = document.querySelector('.music-wrapper');
+        const footer = document.querySelector('footer');
+
+        let isPlaying = false;
+        let currentIcon = './img/boton-musica0.png';
+
+        toggleBtn.addEventListener('click', () => {
+            menu.classList.toggle('visible');
+        });
+
+        document.querySelectorAll('.song-menu li').forEach(item => {
+            item.addEventListener('click', () => {
+                const songSrc = item.dataset.src;
+                const iconSrc = item.dataset.icon;
+                player.src = songSrc;
+                currentIcon = iconSrc;
+                musicIcon.src = iconSrc;
+                player.play();
+                isPlaying = true;
+                menu.classList.remove('visible');
+            });
+        });
+
+        musicIcon.addEventListener('click', () => {
+            if (isPlaying) {
+                player.pause();
+                isPlaying = false;
+                musicIcon.src = './img/boton-musica0.png';
+            } else {
+                player.play();
+                isPlaying = true;
+                musicIcon.src = currentIcon;
+            }
+        });
+
+        player.addEventListener('pause', () => {
+            isPlaying = false;
+            musicIcon.src = './img/boton-musica0.png';
+        });
+
+        player.addEventListener('play', () => {
+            isPlaying = true;
+            musicIcon.src = currentIcon;
         });
     </script>
 </body>

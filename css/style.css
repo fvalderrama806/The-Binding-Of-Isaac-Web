@@ -294,9 +294,89 @@ body, html {
     margin: 0 5px;
     vertical-align: middle;
     }
+    
+.hero-buttons {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.music-wrapper {
+    margin-left: 700px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#music-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#music-toggle img {
+    width: 210px;
+    height: 70px;
+    display: block;
+}
+
+.music-fixed {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+/* Menú de canciones oculto por defecto */
+.song-menu {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background-color: black;
+    border: 2px solid #574eb3;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+}
+
+.song-menu li {
+    padding: 10px;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    text-align: left;
+    background: #222;
+    border-bottom: 1px solid #444;
+    cursor: pointer;
+}
+
+.song-menu li:hover {
+    background-color: #444;
+}
+
+/* Mostrar menú */
+.song-menu.visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
 
 /* intro seccion */
-
 .intro {
     background-image: url('../img/fondo-1.png'); 
     background-size: cover;
@@ -2468,6 +2548,17 @@ to {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
