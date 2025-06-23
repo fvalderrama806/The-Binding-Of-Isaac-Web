@@ -2027,6 +2027,427 @@ body, html {
 }
 }
 
+/* Ajustes adicionales para móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+.header {
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* mantiene en una sola línea */
+    gap: 10px;
+}
+
+.logo img {
+    height: 45px;
+    margin-left: 0;
+}
+
+.nav {
+    gap: 6px;
+}
+
+.menu-boton img {
+    width: 40px !important;
+    height: 40px !important;
+}
+
+.store-boton img {
+    width: 45px !important;
+    height: 75px !important;
+    margin-bottom: 0;
+}
+
+  /* menú desplegable (hasta 480px) */
+.overlay-content {
+    width: 95%;
+    padding: 15px;
+    margin: 40px auto 20px;
+}
+
+.menu-logo {
+    width: 200px;
+    margin: 0 auto 15px;
+}
+
+.menu-list li {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.menu-list h2 {
+    font-size: 10px;
+    margin-bottom: 4px;
+}
+
+.close-btn {
+    width: 45px;
+    height: 45px;
+    top: 30px;
+    right: 20px;
+    font-size: 22px;
+}
+}
+
+/* Hero section para móviles pequeños (480px) */
+@media (max-width: 480px) {
+.hero {
+    height: 80vh;
+    padding: 20px 10px;
+    background-size: 220%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.hero-logo {
+    width: 320px;
+    max-width: 90%;
+    margin-top: 150px; 
+    margin-bottom: 0;
+}
+
+.hero h1 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero-buttons {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    flex-direction: row;
+}
+
+.store-buttons {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.store-buttons .trailer-btn {
+    font-size: 11px;
+    padding: 6px 12px;
+    white-space: nowrap;
+}
+
+  .store-buttons > * {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.hero-buttons img {
+    width: 40px;
+    height: 40px;
+}
+}
+
+/* Intro section para móviles pequeños (480px) */
+@media (max-width: 480px) {
+.intro {
+    margin-top: -30px;
+    padding: 30px 10px;
+}
+
+.intro h2 {
+    font-size: 16px;
+    margin-top: 50px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.intro p {
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.intro-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.intro-image img {
+    max-width: 80px; 
+    height: auto;
+}
+}
+
+/* Call to action section para móviles pequeños (480px) */
+@media (max-width: 480px) {
+.cta-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    overflow: visible;
+    padding-bottom: 0;
+}
+
+.cta-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cta-content {
+    position: relative; /* ✅ Ahora puede crecer según contenido */
+    padding: 20px 15px;
+    padding-right: 130px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    min-height: auto;
+    padding-bottom: 0;
+}
+
+.cta-content h2 {
+    font-size: 11px;
+    margin-top: -135px;
+}
+
+.cta-content p {
+    font-size: 8px;
+    max-width: 100%;
+    text-align: left;
+    margin-top: -18px;
+    margin-bottom: 10px;
+}
+
+.cta-content button {
+    font-size: 10px;
+    padding: 6px 10px;
+    transform: translateY(-15px);
+}
+
+.cta-decorative-image {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 100px !important;
+     z-index: 9999; /* asegúrate que esté encima */
+    display: block;
+}
+
+.cta-decorative-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+}
+
+/* productos responsive - para pantallas hasta 480px */
+
+/* titulo productos responsivo (480px) */
+@media (max-width: 480px) {
+.productos-a {
+    flex-direction: row;   /* cambia columna a fila para imagen al lado izquierdo */
+    align-items: center;
+    padding-top: 0;
+}
+
+.titulo-productos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.titulo-productos h2 {
+    font-size: 18px; /* más pequeño que 24px en 768 */
+    margin: 0;
+    line-height: 1;
+}
+
+.titulo-productos img {
+    width: 45px; /* ajustado para móvil */
+    height: auto;  
+}
+
+/* cajas productos responsivo (480px) */
+.productos-seccion {
+    padding: 20px 10px; /* menos padding para pantallas pequeñas */
+    min-height: auto;
+    margin-top: 20px;
+}
+
+.productos-caja {
+    padding: 15px 10px;
+    border-radius: 8px;
+}
+
+.productos-titulo {
+    flex-direction: column;
+    gap: 8px;
+}
+
+.productos-titulo h2 {
+    font-size: 14px; /* más pequeño */
+    text-align: center;
+}
+
+.productos-titulo img {
+    width: 30px;
+}
+
+.producto {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+}
+
+.producto img {
+    width: 100%;
+    max-width: 280px; /* más pequeño que 350px para móvil */
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.producto-info {
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    gap: 8px;
+    align-items: center;
+}
+
+.producto-info p {
+    font-size: 14px;
+}
+
+.producto-info select {
+    font-size: 9px;
+    padding: 6px;
+    width: 100%;
+    max-width: 200px;
+    background-color: #2C1460;
+    color: #fff;
+    border: none;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.producto-fila {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.img-standar,
+.img-digital {
+    width: 30px;
+}
+
+.titulo-edicion-fisica {
+    margin-top: 40px;
+    }
+
+.titulo-edicion-digital {
+    flex-direction: column;
+    gap: 1px;
+    margin-bottom: 40px;
+}
+
+.titulo-edicion-fisica h3,
+.titulo-edicion-digital h3 {
+    font-size: 16px;
+    text-align: center;
+}
+
+.titulo-edicion-fisica img,
+.titulo-edicion-digital img {
+    width: 35px;
+}
+
+.linea-punteada {
+    margin: 15px auto;
+}
+
+.nota {
+    font-size: 9px;
+    text-align: center;
+    padding: 0 8px;
+}
+}
+
+/* share responsive (480px) */
+@media (max-width: 480px) {
+.share {
+    padding: 30px 12px; /* ligeramente más compacto */
+    gap: 12px;
+}
+
+.share p {
+    font-size: 11px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.barra-morada {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    gap: 10px; /* menos espacio entre elementos */
+    text-align: center;
+}
+
+.social-icons {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; 
+}
+
+.social-icons a img {
+    width: 30px; 
+}
+
+.share-text {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.nicalis-text {
+    font-size: 10px;
+    top: 0;
+    padding: 0 8px;
+    text-align: center;
+}
+}
+
+
+
+
+
+
+
+
+
  /* footer responsive */
 
 
