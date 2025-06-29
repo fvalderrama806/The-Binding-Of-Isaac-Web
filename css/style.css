@@ -2428,7 +2428,6 @@ body, html {
 /* Ajustes para móviles muy pequeños (hasta 400px) */
 @media (max-width: 400px) {
 .header {
-    gap: 6px;
     padding: 10px;
 }
 
@@ -2722,7 +2721,7 @@ body, html {
 }
 
 .historia h1 {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 15px;
 }
 
@@ -2744,7 +2743,7 @@ body, html {
 }
 
 .rejugabilidad h2 {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 15px;
 }
 
@@ -2765,7 +2764,7 @@ body, html {
 }
 
 .caja h3 {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .caja p {
@@ -2784,7 +2783,7 @@ body, html {
 }
 
 .caja-centrada p {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .rejugabilidad-alt {
@@ -2802,11 +2801,11 @@ body, html {
 }
 
 .rejugabilidad-alt .caja h3 {
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .rejugabilidad-alt .caja p {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .titulo-caja {
@@ -2821,7 +2820,7 @@ body, html {
 }
 
 .titulo-caja h3 {
-    font-size: 18px;
+    font-size: 14px;
 }
 
   /* Carrusel (400) */
