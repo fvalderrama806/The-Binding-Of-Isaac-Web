@@ -985,7 +985,7 @@ body, html {
 
 .rejugabilidad p {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.8;
     max-width: 800px;
     margin: 0 auto;
@@ -2480,13 +2480,14 @@ body, html {
 .hero {
     background-size: 280% auto;
     background-position: top center;
+    background-position-y: 0;
     padding: 20px 10px 20px; 
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    min-height: auto;
+    justify-content: space-between;
+    min-height: 560px !important;
     position: relative;
 }
 
@@ -2506,15 +2507,17 @@ body, html {
 }
 
 .hero-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 600px !important;
-    padding: 50px;
+    margin-top: 60px !important; /* o ajusta: 60px, 80px, etc. */
+    padding-bottom: 5px;
     width: 100%;
-    padding-left: 15px;
     gap: 6px;
     flex-wrap: wrap;
-    padding-right: 0;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
 }
 
 .hero-buttons > button,
@@ -2568,27 +2571,27 @@ body, html {
 @media (max-width: 400px) {
 .intro {
     margin-top: 0; 
-    padding: 40px 15px 20px;
+    padding: 5px 15px 20px;
     background-color: transparent;
 }
 
 .intro h2 {
     font-size: 14px;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: -10px;
 }
 
 .intro p {
     font-size: 13px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: -5px;
 }
 
 .intro-images {
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .intro-image img {
@@ -2602,24 +2605,24 @@ body, html {
     background-image: url(../img/imgextra.png);
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: contain; /* ajusta la imagen para que se vea completa dentro */
-    max-width: 400px; /* controla el ancho total */
+    background-size: contain; 
+    max-width: 400px; 
     padding: 20px;
     position: relative;
-    top: -112px; /* sube 50px sobre su posición original */
-    z-index: 10; /* para que quede encima */
+    top: -112px; 
+    z-index: 10; 
 }
 
 .cta-content h2 {
     font-size: 12px;
-    margin: 0 0 5px 0; /* nada de márgenes negativos */
+    margin: 0 0 5px 0; 
     text-align: left;
     margin-top: -7px;
 }
 
 .cta-content p {
     font-size: 8px;
-    margin: 0 0 15px 0; /* espacio debajo para separar del botón */
+    margin: 0 0 15px 0; 
     text-align: left;
     margin-top: -2px;
 }
@@ -2645,24 +2648,35 @@ body, html {
 
 /* productos section (400) */
 @media (max-width: 400px) {
+.titulo-productos {
+    margin-top: -120px;        
+    padding: 0;      
+    text-align: center;
+}
+
 .titulo-productos h2 {
     font-size: 16px;
+    margin: 0;           
+    padding: 0;         
 }
 
 .titulo-productos img {
     width: 40px;
+    margin: 0;           
+    padding: 0;
 }
 
 .productos-caja {
     padding: 10px 8px;
+    margin-top: -48px;
 }
 
 .producto-info p {
-    font-size: 13px;
+    font-size: 10px;
 }
 
 .producto-info .nota {
-    font-size: 10px;
+    font-size: 9px !important;
     margin-top: 5px;
 }
 
