@@ -3225,26 +3225,28 @@ to {
 }
 
 @keyframes slideUp {
-  from {
+from {
     opacity: 0;
     transform: scale(0.95);
-  }
-  to {
+}
+to {
     opacity: 1;
     transform: scale(1);
-  }
+}
 }
 
 @keyframes fadeIn {
-  from {
+from {
     opacity: 0;
     transform: translateY(-10%);
-  }
-  to {
+}
+to {
     opacity: 1;
     transform: translateY(0);
-  }
 }
+}
+
+
 
 
 
