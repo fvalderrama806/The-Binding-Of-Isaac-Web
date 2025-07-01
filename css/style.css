@@ -5,13 +5,15 @@
     box-sizing: border-box;
     }
     
-.body {
+body {
     margin: 0;
     padding: 0;
 }
 
 body, html {
     width: 100%;
+    height: 100%;
+    background-color: black;
     overflow-x: hidden;
 }
 
@@ -206,7 +208,8 @@ body, html {
 .hero {
     position: relative; 
     width: 100%; 
-    height: 100vh; 
+    min-height: 100vh;
+    overflow: hidden; 
     background-image: url('../img/portada.jpg'); 
     background-size: cover;
     background-position: center;
@@ -217,6 +220,7 @@ body, html {
     flex-direction: column;
     justify-content: center; 
     align-items: center; 
+    flex-shrink: 0;
     }  
 
 .hero-content {
@@ -383,6 +387,7 @@ body, html {
     background-position: center;
     background-repeat: no-repeat;
     padding: 60px 20px;
+    margin: 0;
     color: #AD8B54;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
@@ -1666,7 +1671,7 @@ body, html {
 }
 
 /* menú desplegable responsive */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 .overlay-content {
     width: 90%;
     padding: 20px;
@@ -1706,10 +1711,11 @@ body, html {
 /* Hero section responsive*/ 
 @media (max-width: 768px) {
 .hero {
-    height: 76vh;
-    padding: 20px;
+    padding: 40px 20px 20px;
+    margin: 0;
+    box-sizing: border-box; 
     background-position: center;
-    background-size: 300%;
+    background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
     display: flex;
@@ -1720,16 +1726,16 @@ body, html {
 }
 
 .hero-logo {
-    width: 500px;
-    max-width: 100%;
-    margin-bottom: 0;
-    margin-top: 300px;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 160px;
+    margin-bottom: 16px;
 }
 
 .hero h1 {
     font-size: 28px;
     margin-bottom: 28px;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 .hero-buttons {
@@ -1798,7 +1804,7 @@ body, html {
 }
 
 .intro-image img {
-    max-width: 5%;
+    max-width: 80%;
 }
 }
 
@@ -1817,9 +1823,9 @@ body, html {
 }
 
 .cta-content {
-    position: absolute;
     padding: 30px 20px;
     padding-right: 150px;
+    top: 20px;
     width: 100%;
     height: auto;
     display: flex;
@@ -1832,24 +1838,26 @@ body, html {
 .cta-content h2 {
     font-size: 20px;
     margin-bottom: 20px;
+    margin-top: -20px;
 }
 
 .cta-content p {
     font-size: 14px;
     max-width: 100%;
-    margin-bottom: 20px;
+    margin-top: -5px;
 }
 
 .cta-content button {
     font-size: 10px;
     padding: 8px 16px;
+    margin-top: -60px;
 }
 
 .cta-decorative-image {
     position: absolute;
     right: 20px;
-    top: 60px;
-    width: 145px;
+    top: 80px;
+    width: 120px;
     z-index: 1;
 }
 }
@@ -1864,7 +1872,7 @@ body, html {
 }
 
 .titulo-productos {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
 }
 
@@ -2314,7 +2322,7 @@ body, html {
     justify-content: flex-start;
     height: auto;
     padding: 30px 0;
-    background-position: top;
+    background-color: black;
     position: relative; 
 }
 
@@ -2325,7 +2333,6 @@ body, html {
     left: -13px; 
     width: 100%;
     height: 400px;
-    background-color: white; 
     background-size: contain;
     z-index: 0;
 }
@@ -2387,14 +2394,14 @@ body, html {
 }
 
 .traumas h2 {
-    font-size: 22px;
+    font-size: 18px;
     margin: 0;
 }
 
 .traumas .imagen-trauma {
     order: -1;
-    width: 100px;
-    height: 100px; 
+    width: 90px;
+    height: 90px; 
 }
 
 .trauma-cajas {
